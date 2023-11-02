@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <Label text="Vehicle Tax Calculator" styleClass="header-label"/>
+    </top>
+    <center>
+        <VBox spacing="10">
+            <Label text="Enter vehicle details:" styleClass="instruction-label"/>
+            <HBox spacing="10">
+                <Label text="Vehicle Type:"/>
+                <RadioButton text="CAR" fx:id="carRadioButton"/>
+                <RadioButton text="BUS" fx:id="busRadioButton"/>
+                <RadioButton text="TRUCK" fx:id="truckRadioButton"/>
+            </HBox>
+            <Label text="Engine Capacity (CC):"/>
+            <TextField fx:id="engineCapacityField"/>
+            <Label text="Manufacture Year:"/>
+            <TextField fx:id="manufactureYearField"/>
+            <Button text="Calculate Tax" onAction="#calculateTax" styleClass="calculate-button"/>
+            <Label fx:id="resultLabel" styleClass="result-label"/>
+        </VBox>
+    </center>
+</BorderPane>
+
